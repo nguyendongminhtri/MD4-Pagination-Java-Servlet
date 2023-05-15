@@ -119,7 +119,7 @@ public class CategoryController extends HttpServlet {
             pageNumber = Integer.parseInt(request.getParameter("page"));
         }
         System.out.println("pageNumber --->"+pageNumber);
-        int elementOfPage = 3;
+        int elementOfPage = 6;
         int start = (pageNumber-1)*elementOfPage;
         List<Category> categoryList = categoryService.findAll(start,elementOfPage);
         int totalElement = categoryService.getNoOfRecords();
